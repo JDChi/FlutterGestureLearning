@@ -82,7 +82,9 @@ class _WhitePaperState extends State<WhitePaper> {
     paintModel.removeEmpty();
   }
 
-  void _onDoubleTap() {}
+  void _onDoubleTap() {
+    paintModel.clear();
+  }
 
   void _onLongPressStart(LongPressStartDetails details) {
     paintModel.activeEditLine(Point.fromOffset(details.localPosition));

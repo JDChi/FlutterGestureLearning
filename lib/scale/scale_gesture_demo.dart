@@ -14,6 +14,8 @@ class ScaleGestureDemo extends StatefulWidget {
 class _ScaleGestureDemoState extends State<ScaleGestureDemo> {
   final ValueNotifier<Matrix4> matrix =
       ValueNotifier<Matrix4>(Matrix4.identity());
+
+  // 单位矩阵
   Matrix4 recodeMatrix = Matrix4.identity();
 
   /// 手指焦点位置
