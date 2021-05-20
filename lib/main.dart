@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gesture_learning/pan/white_paper.dart';
+import 'package:flutter_gesture_learning/scale/scale_gesture_demo.dart';
 import 'package:flutter_gesture_learning/spring/spring_widget.dart';
 import 'package:flutter_gesture_learning/stamp/stamp_paper.dart';
 
 const String springPage = "spring_page";
 const String stampPaper = "stamp_paper";
 const String whitePaper = "white_paper";
+const String scaleGesture = "scale_gesture";
 
 void main() {
   runApp(MyApp());
@@ -22,7 +24,8 @@ class MyApp extends StatelessWidget {
       routes: {
         springPage: (context) => SpringPage(),
         stampPaper: (context) => StampPaper(),
-        whitePaper: (context) => WhitePaper()
+        whitePaper: (context) => WhitePaper(),
+        scaleGesture: (context) => ScaleGestureDemo()
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -63,7 +66,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.pushNamed(context, whitePaper);
                 },
-                child: Text("白板"))
+                child: Text("白板")),
+            TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, scaleGesture);
+                },
+                child: Text("缩放"))
           ],
         ),
       ),
