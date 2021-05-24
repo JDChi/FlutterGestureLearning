@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gesture_learning/pan/white_paper.dart';
 import 'package:flutter_gesture_learning/pan1/white_paper1.dart';
+import 'package:flutter_gesture_learning/raw_gesture_detector/raw_gesture_detector_demo.dart';
 import 'package:flutter_gesture_learning/scale/scale_gesture_demo.dart';
 import 'package:flutter_gesture_learning/spring/spring_widget.dart';
 import 'package:flutter_gesture_learning/stamp/stamp_paper.dart';
@@ -10,6 +11,7 @@ const String stampPaper = "stamp_paper";
 const String whitePaper = "white_paper";
 const String scaleGesture = "scale_gesture";
 const String whitePaper1 = "white_paper1";
+const String rawGestureDetectorDemo = "raw_gesture_detector_demo";
 
 void main() {
   runApp(MyApp());
@@ -29,6 +31,7 @@ class MyApp extends StatelessWidget {
         whitePaper: (context) => WhitePaper(),
         scaleGesture: (context) => ScaleGestureDemo(),
         whitePaper1: (context) => WhitePaper1(),
+        rawGestureDetectorDemo: (context) => RawGestureDetectorDemo()
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -79,7 +82,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.pushNamed(context, whitePaper1);
                 },
-                child: Text("白板1"))
+                child: Text("白板1")),
+            TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, rawGestureDetectorDemo);
+                },
+                child: Text("raw gesture detector"))
           ],
         ),
       ),
