@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gesture_learning/n_gesture_detector/n_gesture_detector_demo.dart';
 import 'package:flutter_gesture_learning/pan/white_paper.dart';
 import 'package:flutter_gesture_learning/pan1/white_paper1.dart';
 import 'package:flutter_gesture_learning/raw_gesture_detector/raw_gesture_detector_demo.dart';
@@ -12,6 +13,7 @@ const String whitePaper = "white_paper";
 const String scaleGesture = "scale_gesture";
 const String whitePaper1 = "white_paper1";
 const String rawGestureDetectorDemo = "raw_gesture_detector_demo";
+const String nGestureDetectorDemo = "n_gesture_detector_demo";
 
 void main() {
   runApp(MyApp());
@@ -31,7 +33,8 @@ class MyApp extends StatelessWidget {
         whitePaper: (context) => WhitePaper(),
         scaleGesture: (context) => ScaleGestureDemo(),
         whitePaper1: (context) => WhitePaper1(),
-        rawGestureDetectorDemo: (context) => RawGestureDetectorDemo()
+        rawGestureDetectorDemo: (context) => RawGestureDetectorDemo(),
+        nGestureDetectorDemo: (context) => NGestureDetectorDemo()
       },
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -87,7 +90,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   Navigator.pushNamed(context, rawGestureDetectorDemo);
                 },
-                child: Text("raw gesture detector"))
+                child: Text("raw gesture detector")),
+            TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, nGestureDetectorDemo);
+                },
+                child: Text("n gesture detector"))
           ],
         ),
       ),
